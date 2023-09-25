@@ -19,7 +19,7 @@ Code for the CVPR 2023 paper:
 ## Setup
 - **Environment:** Our implementation is built on [UNO](https://github.com/DonkeyShot21/UNO) v1 and [ComEx](https://github.com/muliyangm/ComEx), so please carefully follow them to prepare the code environment.
 - **Datasets:** We use CIFAR10/100 and Tiny-ImageNet datasets in our experiments. The CIFAR datasets can be automatically downloaded to the path specified by `--data_dir` when passing the `--download` argument. For Tiny-ImageNet one can refer to [this script](https://gist.github.com/moskomule/2e6a9a463f50447beca4e64ab4699ac4).
-- **Checkpoints:** BYOP follows the two-stage training paradigm (supervised pretraining + novel class discovery). In Distribution-Agnostic NCD, we use the base set (which has the same imbalance ratio as the novel set) to perform the supervised pertraining. We will later release the pretrained checkpoints (as indicated in the TODO list). 
+- **Checkpoints:** BYOP follows the two-stage training paradigm (supervised pretraining + novel class discovery). In Distribution-Agnostic NCD, we use the base set (which has the same imbalance ratio as the novel set) to perform the supervised pertraining. The pretrained checkpoints are available at [OneDrive](https://1drv.ms/f/s!AjO77NiOqskYmJJr-Y-7lazlWH7gJw?e=1h9mPx).
 - **Logging:** To use [Wandb](https://wandb.ai/site) for logging, please create an account and specify `--entity YOUR_ENTITY` and `--project YOUR_PROJECT`. Normally, it requires the Internet accessibility to proceed; otherwise, you can pass `--offline` for logging locally, and the generated files can also be manually uploaded to [Wandb](https://wandb.ai/site) for further analysis.
 
 ## Commands
@@ -59,7 +59,7 @@ CUDA_VISIBLE_DEVICES=0 python main_byop.py \
 - Specify `--pretrained` with the path to the checkpoint you would like to use (only for discovery).
 
 ## TODO
-- [ ] Upload the pretrained checkpoints
+- [x] Upload the pretrained checkpoints
 
 
 ## Acknowledgements
